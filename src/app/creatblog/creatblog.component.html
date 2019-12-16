@@ -1,0 +1,32 @@
+<div class="container-fluid">
+    <form  [formGroup]="form">
+        <!-- name -->
+        <div class="form-group">
+          <label>Name</label>
+          <input type="text" class="form-control" formControlName="Name">
+        </div>
+
+        <!-- post title -->
+        <label >Image link</label> 
+        <input type="text" class="form-control" formControlName="imglink">
+    
+        <!-- post title -->
+        <label >Title</label> 
+        <input type="text" class="form-control" formControlName="title">
+    
+        <!-- content -->
+        <label>Content</label>
+        <textarea class="form-control" formControlName="content" ></textarea>
+ 
+        <!-- email -->
+        <div class="form-group">
+          <label for="email">Email address:</label>
+          <input type="email" class="form-control"  formControlName="email">
+        </div>
+
+        <!-- submit button -->
+        <!-- <input type="submit" placeholder="submit here"   > -->
+        <button type="submit" class="btn btn-primary" [disabled]="!this.form.valid" (click)=fun()> create</button>
+        <!-- {{this.form.valid}} -->
+    </form>
+    </div>
